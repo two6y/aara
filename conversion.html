@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+ <body style="background-color:#FFCDD8;"><html>
+<body style= "font-family: trebuchet ms, sans-serif;"}><html>
+<p>
+    <a href="index.html">Back to Home Page</a>
+</p>
+<html>
+<body>
+
+<center><h2>Unit Conversion&#127872;</h2></center>
+   
+
+<form action="/action_page.php">
+<center><label for="convert"> Choose a unit:</label></center>
+
+<Center>
+<p> Fahrenheit<input id="f" type="number">  <button onclick="convertf()" > Convert to Celsius to Fahrenheit </button>
+<input id ="c2" readonly>Celsius</p>
+
+<p> Meters <input id="mt" type="number">     <button onclick="convertmt()" > Convert to Meters to Feet </button>
+<input id ="ft2" readonly>Feet</p>
+
+<p>Feet <input id="ft" type="number">       <button onclick="convertft()" > Convert to Feet to Meters </button>
+<input id ="mt2" readonly>Meters</p>
+</center>
+
+<script>
+function convertc() {
+    var x;
+        x = document.getElementById("c").value * 9 / 5 + 32;
+        document.getElementById("f2").value = Math.round(x*100)/100;
+}
+
+function convertf() {
+    var x;
+    x = (document.getElementById("f").value -32) * 5 / 9;
+    document.getElementById("c2").value = Math.round(x*100)/100;
+}
+
+function convertmt() {
+    var x;
+    x = document.getElementById("mt").value * 3.28084;
+    document.getElementById("ft2").value = Math.round(x*100)/100;
+}
+
+function convertft() {
+    var x;
+    x = document.getElementById("ft").value / 3.28084;
+    document.getElementById("mt2").value = Math.round(x*100)/100;
+    document.write('<br><a href="index.html">Back to Home Page</a>');
+}
+
+
+</script>
+
+</body>
+</html>
