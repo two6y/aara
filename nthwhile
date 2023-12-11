@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+ <body style="background-color:#FFCDD8;"><html>
+<body style= "font-family: trebuchet ms, sans-serif;"}><html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Nth Factorial</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+
+        var num=3;
+        var fac=1;
+
+        while(var i=num; i>=1; i--)
+        {
+            fact = fact * i;
+        }
+        document.write(fact);
+        <a href="Nth.html">Back to Previous Page</a>
+        </script>
+    </body>
+</html>
