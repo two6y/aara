@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+ <body style="background-color:#FFCDD8;"><html>
+<p>
+    <a href="index.html">Back to Home Page</a>
+</p>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Income Tax Calculator&#127872;</title>
+    <style>
+    article, aside, figure, footer, header, nav, section {
+    display: block;
+    }
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin: 0 auto;
+    width: 500px;
+    border: 200px solid pink;
+    }
+    h1 {
+    color: black;
+    margin-top: 0;
+    }
+    section {
+    padding: 1em 2em;
+    }
+    label {
+    float: left;
+    width: 10em;
+    text-align: right;
+    }
+    input {
+    margin-left: 1em;
+    margin-bottom: .5em;
+    }
+    </style>
+    <script>
+    var P = function (id) {
+    return document.getElementById(id);
+}
+var calculate_tax = function() {
+    var total;
+    var income = parseFloat( P("income").value );
+    P("tax").value = calcTaxes(income);
+    console.log(tax);
+    function calcTaxes(amount){
+    var calculate = 0;
+    if(amount <= 250000){
+        tax = 0;
+    }
+    if(amount >= 250000){
+    tax = (amount - 250000) * .20;  
+    }
+    if(amount >= 400000){
+    tax = (amount - 400000) * .25 + 30000;
+    }
+    if(amount >= 800000){
+    tax = (amount - 800000) * .30 + 130000;
+    }
+    if(amount >= 2000000){
+    tax = (amount - 2000000) * .32 + 490000;
+    }
+    if(amount >= 8000000){
+    tax = (amount - 8000000) * .35 + 2410000;
+}
+    return tax;
+}
+}
+window.onload = function () {
+    P("calculate").onclick = calculate_tax;
+}
+    </script>
+</head>
+<body>
+<section>
+    <h1>Income Tax Calculator</h1>
+    <label>Enter taxable income:</label>
+    <input type="text" id="income" />
+    <input type="button" value="Calculate" name="calculate" id="calculate" /><br><br>
+    <label>Income tax:</label>
+    <input type="text" id="tax"><br>
+     
+</section>
+</body>
+</html>
